@@ -6,13 +6,13 @@ setup(
     description="A highly accurate, universal CLI tool for web technology detection.",
     author="OnurDemir1",
     packages=find_packages(exclude=["tests", "tests.*"]),
+    python_requires=">=3.8",
     install_requires=[
-        "httpx==0.27.0",
-        "beautifulsoup4==4.12.3",
-        "dnspython==2.6.1",
-        "mmh3==4.1.0",
-        "rich==13.7.1",
-        "pillow==10.2.0"
+        "httpx>=0.27",
+        "beautifulsoup4>=4.12",
+        "dnspython>=2.6",
+        "mmh3>=4.1",
+        "rich>=13.7",
     ],
     extras_require={
         "dev": ["pytest>=8.0"],
