@@ -9,14 +9,32 @@ Wtective is built to be **conservative**: it favours real signals (headers, cook
 ```bash
 git clone https://github.com/OnurDemir1/Wtective.git
 cd Wtective
-pip install .
 ```
 
-Or install globally with [pipx](https://pipx.pypa.io/):
+**Recommended — [pipx](https://pipx.pypa.io/)** (installs the `wtect` command globally in its own isolated environment):
 
 ```bash
 pipx install .
 ```
+
+On Debian/Kali/Ubuntu, install pipx first if you don't have it:
+
+```bash
+sudo apt install -y pipx
+pipx ensurepath   # then restart your shell
+```
+
+**Alternative — virtual environment:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install .
+```
+
+> Running a bare `pip install .` on Debian/Kali/Ubuntu fails with
+> `error: externally-managed-environment` (PEP 668). Use pipx or a venv as
+> shown above rather than `--break-system-packages`.
 
 ## Usage
 
